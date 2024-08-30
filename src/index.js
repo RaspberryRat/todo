@@ -1,5 +1,6 @@
 import "./styles.css"
 import Todo from "./todo.js"
+import Project from "./project.js"
 
 
 const newTodoBtn = document.getElementById('add-todo-submit');
@@ -17,6 +18,8 @@ function newTodo(event) {
 
 
   const newTodo = new Todo(title, description, dueDate, priority);
+
+  addToProject(newTodo);
 
   publishTodo(newTodo);
 }
@@ -66,4 +69,10 @@ function formatText(text) {
 
 function titleCase(str) {
   return str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+}
+
+const defaultProject = new Project();
+
+function addToProject(item, project = defaultProject) {
+  project.addItem(item);
 }
