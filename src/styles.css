@@ -97,3 +97,18 @@ h6 {
 #due-date {
   justify-self: start;
 }
+
+.default-todos>ul {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+  justify-items: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.default-todos>ul>li {
+  display: flex;
+}

@@ -17,5 +17,24 @@ function newTodo(event) {
 
 
   const newTodo = new Todo(title, description, dueDate, priority);
-  console.log(newTodo)
+
+  publishTodo(newTodo);
+}
+
+function publishTodo(todo) {
+  const defaultList = document.getElementById('default');
+  const list = document.createElement('ul');
+  defaultList.appendChild(list);
+  for (const key in todo) {
+    let item = document.createElement('li');
+    let keyText = document.createElement('div');
+    let keyPairText = document.createElement('div');
+    if (todo.hasOwnProperty(key)) {
+      keyText.innerText = `${key}:`;
+      keyPairText.innerText = todo[key];
+    }
+    item.appendChild(keyText);
+    item.appendChild(keyPairText);
+    list.appendChild(item);
+  }
 }
