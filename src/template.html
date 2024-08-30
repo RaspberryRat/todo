@@ -12,6 +12,26 @@
     <nav>
     </nav>
   </header>
+
+  <div class="new-todo">
+    <div class="form-container">
+      <form>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+        <label for="due-date">
+          <input type="datetime" id="due-date" name="due-date">
+          <input type="radio" name="priority" value="High"
+            class="priority-value">High
+          <input type="radio" name="priority" value="Medium"
+            class="priority-value">Medium
+          <input type="radio" name="priority" value="Low"
+            class="priority-value">Low
+          <input type="submit" value="add-todo" id="add-todo-item">
+      </form>
+    </div>
+  </div>
   <div id="content"></div>
 
 </body>
