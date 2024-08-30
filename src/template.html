@@ -20,15 +20,17 @@
         <input type="text" id="title" name="title">
         <label for="description">Description:</label>
         <input type="text" id="description" name="description">
-        <label for="due-date">
-          <input type="datetime" id="due-date" name="due-date">
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" name="due-date">
+        <div class="radio-btn-container">
           <input type="radio" name="priority" value="High"
             class="priority-value">High
           <input type="radio" name="priority" value="Medium"
             class="priority-value">Medium
           <input type="radio" name="priority" value="Low"
             class="priority-value">Low
-          <input type="submit" value="add-todo" id="add-todo-item">
+        </div>
+        <input type="submit" value="New TODO" id="add-todo-submit">
       </form>
     </div>
   </div>

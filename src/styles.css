@@ -69,3 +69,31 @@ h6 {
 }
 
 /* END RESET */
+
+
+.form-container>form {
+  display: grid;
+  grid-template-columns: 100px 2fr;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  width: 250px;
+  gap: 10px;
+
+}
+
+.radio-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / span 2;
+  gap: 8px;
+}
+
+#add-todo-submit {
+  grid-row: 5;
+  grid-column: 1 / span 2;
+}
+
+#due-date {
+  justify-self: start;
+}
